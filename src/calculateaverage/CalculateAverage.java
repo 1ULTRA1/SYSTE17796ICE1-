@@ -5,6 +5,7 @@ public class CalculateAverage {
         double[] grades = new double[] {20, 80, -500,
         40, 75, 50, 100, 76, 80, 90};
         System.out.println("The total grade is: " + calcAvg(grades));
+        System.out.println("The highest grade is: " + calcMax(grades));
         
     }
     static double calcAvg (double[] g){
@@ -19,6 +20,15 @@ public class CalculateAverage {
         total = total / g.length;
                 
         return total;
+    }
+    static double calcMax (double[] m) {
+        double max = 0;
+            
+        for (int i = 0; i < m.length; i++){
+            if (m[i] > max)
+                max = m[i];
+        }
+        return max;
     }
     
 }
